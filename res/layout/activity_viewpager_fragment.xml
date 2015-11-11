@@ -12,7 +12,7 @@
         android:layout_gravity="center" >
     </ProgressBar>
 
-    <com.smapps.sgbg.volley.utils.MyNetworkImage
+    <vn.cbtech.hdwallpaper.volley.utils.MyNetworkImage
         android:id="@+id/categoryImgView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
