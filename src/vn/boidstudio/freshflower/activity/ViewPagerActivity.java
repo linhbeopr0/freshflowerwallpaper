@@ -116,9 +116,10 @@ public class ViewPagerActivity extends FragmentActivity {
 			}
 		});
 
-//		mViewPager.setOffscreenPageLimit(10);
-		mViewPager.setCurrentItem(pos);
-		mHrzGridView.smoothScrollToPosition(pos);
+//		mViewPager.setOffscreenPageLimit(10);\
+		Log.d("LINH", "setCurrentItem = " + pos);
+		mViewPager.setCurrentItem(pos-1);
+		mHrzGridView.smoothScrollToPosition(pos-1);
 		mViewPager.setOnPageChangeListener(new OnPageChangeListener() {
 
 			@Override
@@ -195,7 +196,7 @@ public class ViewPagerActivity extends FragmentActivity {
 	}
 
 	private void initAd() {
-		StartAppSDK.init(this, "109866585", "201154763", false);
+		StartAppSDK.init(this, "109866585", "212836627", false);
 		this.registerReceiver(this.mConnReceiver, new IntentFilter(
 				ConnectivityManager.CONNECTIVITY_ACTION));
 	}

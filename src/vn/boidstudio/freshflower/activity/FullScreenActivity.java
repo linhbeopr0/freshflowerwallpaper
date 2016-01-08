@@ -68,9 +68,9 @@ public class FullScreenActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_full_screen);
 		Intent i = getIntent();
-		mIndex = i.getIntExtra("index", 0);
-		mLink = MainActivity.mData.get(mIndex);
-		mLink = refineTo1280(mLink);
+//		mIndex = i.getIntExtra("index", 0);
+		mLink = i.getStringExtra("link");
+//		mLink = refineTo1280(mLink);
 		
 		mContext = this;
 		
@@ -240,7 +240,7 @@ public class FullScreenActivity extends Activity {
 	}
 
 	private void initAd() {
-		StartAppSDK.init(this, "109866585", "201154763", false);
+		StartAppSDK.init(this, "109866585", "212836627", false);
 		this.registerReceiver(this.mConnReceiver, new IntentFilter(
 				ConnectivityManager.CONNECTIVITY_ACTION));
 	}

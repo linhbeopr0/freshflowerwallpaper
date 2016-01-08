@@ -7,7 +7,6 @@ import vn.boidstudio.freshflower.volley.utils.MyNetworkImageWithResponse;
 
 import com.android.volley.toolbox.ImageLoader;
 
-
 import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
@@ -28,9 +27,9 @@ public class ViewPagerFragment extends Fragment {
 	private MyNetworkImageWithResponse mFullScreenImg;
 	private ImageLoader mImageLoader = AppController.getInstance()
 			.getImageLoader();
-	
+
 	public ViewPagerFragment() {
-		
+
 	}
 
 	public ViewPagerFragment(Context context) {
@@ -51,13 +50,10 @@ public class ViewPagerFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.activity_viewpager_fragment,
 				container, false);
-		mFullScreenImg = (MyNetworkImageWithResponse) v.findViewById(R.id.categoryImgView);
-		if (mPos >= 25) {
-			mFullScreenImg.setImageUrl(mLink, mImageLoader);
-		} else {
-			mFullScreenImg.setImageResource(MainActivity.previewCacheItems[mPos]);
-		}
-		
+		mFullScreenImg = (MyNetworkImageWithResponse) v
+				.findViewById(R.id.categoryImgView);
+		mFullScreenImg.setImageUrl(mLink, mImageLoader);
+
 		mFullScreenImg.setOnClickListener(new OnClickListener() {
 
 			@Override

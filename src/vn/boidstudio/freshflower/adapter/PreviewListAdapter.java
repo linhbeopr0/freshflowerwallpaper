@@ -139,21 +139,22 @@ public class PreviewListAdapter extends BaseAdapter {
 		// Set the data outside once the handler and view are instantiated
 		// handler.iv.setImageUrl(data.get(position).getImgLinks(),
 		// imageLoader);
-		if (position > 25) {
 		holder.iv
 				.setResponseObserver(new MyNetworkImageWithResponse.ResponseObserver() {
 
 					@Override
 					public void onSuccess() {
 						if (scrolling_count == 0) {
-							Log.d("LINH", "Preview: success, send message to scroll to "
-									+ position);
+							Log.d("LINH",
+									"Preview: success, send message to scroll to "
+											+ position);
 							Message msg = new Message();
 							msg.arg1 = position;
 							msg.what = 100;
 							mHandler.sendMessage(msg);
 							scrolling_count++;
-							// TODO: still not working with success, always return 0 pos
+							// TODO: still not working with success, always
+							// return 0 pos
 						}
 					}
 
@@ -163,9 +164,6 @@ public class PreviewListAdapter extends BaseAdapter {
 
 					}
 				});
-		} else {
-			holder.iv.setImageResource(MainActivity.previewCacheItems[position]);
-		}
 
 		holder.iv.setImageUrl(data.get(position), imageLoader);
 		FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(columnWidth,

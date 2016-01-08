@@ -2,6 +2,7 @@ package vn.boidstudio.freshflower.adapter;
 
 import java.util.ArrayList;
 
+import vn.boidstudio.freshflower.activity.MainActivity;
 import vn.boidstudio.freshflower.activity.ViewPagerFragment;
 
 
@@ -31,7 +32,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 		Log.d("LINH", "getItem: pos = " + pos);
 		mFragment = new ViewPagerFragment(mContext);
 		Bundle info = new Bundle();
-		info.putString("link", mData.get(pos));
+		info.putString("link", MainActivity.mData.get(pos));
 		info.putInt("pos", pos);
 		mFragment.setArguments(info);
 		return mFragment;

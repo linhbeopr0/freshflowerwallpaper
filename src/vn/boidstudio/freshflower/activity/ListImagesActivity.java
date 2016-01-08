@@ -48,6 +48,7 @@ public class ListImagesActivity extends Activity {
 	public static int UPDATE_MESSAGE = 99;
 	public static int SCROLL_TO_LOADED_IMAGE = 100;
 	public int size = 0;
+	public int currentPos = 0;
 	
 	private static int count = 0;
 	private StartAppAd startAppAd = new StartAppAd(this);
@@ -96,8 +97,8 @@ public class ListImagesActivity extends Activity {
 					int position, long id) {
 				Intent i = new Intent(ListImagesActivity.this,
 						FullScreenActivity.class);
-				i.putExtra("title", mTitle);
-				i.putExtra("index", position);
+				i.putExtra("link", MainActivity.mData.get(position));
+				currentPos = position;
 				startActivity(i);
 			}
 		});
@@ -158,7 +159,7 @@ public class ListImagesActivity extends Activity {
 	}
 	
 	private void initAd() {
-		StartAppSDK.init(this, "109866585", "201154763", false);
+		StartAppSDK.init(this, "109866585", "212836627", false);
 		this.registerReceiver(this.mConnReceiver, new IntentFilter(
 				ConnectivityManager.CONNECTIVITY_ACTION));
 	}
@@ -209,5 +210,14 @@ public class ListImagesActivity extends Activity {
 		count++;
 		unregisterReceiver(mConnReceiver);
 		super.onDestroy();
+	}
+	
+	@Override
+	protected void onResume() {
+		Log.d("LINH", "onResume()");
+		if (currentPos > 10) {
+			mLstHrzGridView.smoothScrollToPosition(currentPos);
+		}
+		super.onResume();
 	}
 }

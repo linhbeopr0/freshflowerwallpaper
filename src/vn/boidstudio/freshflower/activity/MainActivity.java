@@ -45,7 +45,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-	private MyNetworkImage[] mImgList;
+	private ImageView[] mImgList;
 	private int[] mImgListIdx;
 	private RelativeLayout mBtnCategory;
 	private TextView mTextBanner;
@@ -84,7 +84,7 @@ public class MainActivity extends Activity {
 	}
 
 	private void initAd() {
-		StartAppSDK.init(this, "109866585", "201154763", false);
+		StartAppSDK.init(this, "109866585", "212836627", false);
 		this.registerReceiver(this.mConnReceiver, new IntentFilter(
 				ConnectivityManager.CONNECTIVITY_ACTION));
 
@@ -111,6 +111,7 @@ public class MainActivity extends Activity {
 							ViewPagerActivity.class));
 
 					intent.putExtra("index", mImgListIdx[pos]);
+					Log.d("LINH", "intent to ViewPager: pos = " + mImgListIdx[pos]);
 					startActivity(intent);
 				}
 			});
@@ -135,7 +136,7 @@ public class MainActivity extends Activity {
 			public void run() {
 				try {
 					while (true) {
-						Thread.sleep(60000);
+						Thread.sleep(5000);
 						mHandler.sendEmptyMessage(99);
 					}
 					// stopThread(mThread);
@@ -150,7 +151,7 @@ public class MainActivity extends Activity {
 	}
 
 	private void initAmination() {
-		final int[] newIndex = randomAllocate(SIZE);
+		final int[] newIndex = randomAllocate(25);
 		for (int i = 0; i < ITEM_SIZE; i++) {
 			final int pos = i;
 			final int idx = newIndex[pos];
@@ -178,7 +179,7 @@ public class MainActivity extends Activity {
 
 				@Override
 				public void onAnimationStart(Animation animation) {
-					mImgList[pos].setImageUrl(mData.get(idx), imageLoader);
+					mImgList[pos].setImageResource(previewCacheItems[idx]);
 					mImgListIdx[pos] = idx;
 				}
 
@@ -205,24 +206,24 @@ public class MainActivity extends Activity {
 		mTextBanner = (TextView) findViewById(R.id.txtBanner);
 
 		mImgListIdx = new int[ITEM_SIZE];
-		mImgList = new MyNetworkImage[ITEM_SIZE];
-		mImgList[0] = (MyNetworkImage) findViewById(R.id.layout_1_img1);
-		mImgList[1] = (MyNetworkImage) findViewById(R.id.layout_1_img2);
+		mImgList = new ImageView[ITEM_SIZE];
+		mImgList[0] = (ImageView) findViewById(R.id.layout_1_img1);
+		mImgList[1] = (ImageView) findViewById(R.id.layout_1_img2);
 
-		mImgList[2] = (MyNetworkImage) findViewById(R.id.layout_2_img1);
-		mImgList[3] = (MyNetworkImage) findViewById(R.id.layout_2_img2);
-		mImgList[4] = (MyNetworkImage) findViewById(R.id.layout_2_img3);
-		mImgList[5] = (MyNetworkImage) findViewById(R.id.layout_2_img4);
-		mImgList[6] = (MyNetworkImage) findViewById(R.id.layout_2_img5);
+		mImgList[2] = (ImageView) findViewById(R.id.layout_2_img1);
+		mImgList[3] = (ImageView) findViewById(R.id.layout_2_img2);
+		mImgList[4] = (ImageView) findViewById(R.id.layout_2_img3);
+		mImgList[5] = (ImageView) findViewById(R.id.layout_2_img4);
+		mImgList[6] = (ImageView) findViewById(R.id.layout_2_img5);
 
-		mImgList[7] = (MyNetworkImage) findViewById(R.id.layout_3_img1);
-		mImgList[8] = (MyNetworkImage) findViewById(R.id.layout_3_img2);
-		mImgList[9] = (MyNetworkImage) findViewById(R.id.layout_3_img3);
-		mImgList[10] = (MyNetworkImage) findViewById(R.id.layout_3_img4);
+		mImgList[7] = (ImageView) findViewById(R.id.layout_3_img1);
+		mImgList[8] = (ImageView) findViewById(R.id.layout_3_img2);
+		mImgList[9] = (ImageView) findViewById(R.id.layout_3_img3);
+		mImgList[10] = (ImageView) findViewById(R.id.layout_3_img4);
 
-		mImgList[11] = (MyNetworkImage) findViewById(R.id.layout_4_img1);
-		mImgList[12] = (MyNetworkImage) findViewById(R.id.layout_4_img2);
-		mImgList[13] = (MyNetworkImage) findViewById(R.id.layout_4_img3);
+		mImgList[11] = (ImageView) findViewById(R.id.layout_4_img1);
+		mImgList[12] = (ImageView) findViewById(R.id.layout_4_img2);
+		mImgList[13] = (ImageView) findViewById(R.id.layout_4_img3);
 
 		final int[] newIndex = randomAllocate(previewCacheItems.length);
 
@@ -232,9 +233,8 @@ public class MainActivity extends Activity {
 			 * .getImageListener(mImgList[i], R.drawable.icon_no_img,
 			 * R.drawable.icon_no_img), 400, 300);
 			 */
-			//mImgList[i].setImageUrl(mData.get(newIndex[i]), imageLoader);
-			Log.d("LINH", "id = " + previewCacheItems[newIndex[i]]);
-			mImgList[i].setImageResource(R.drawable.f0);
+			// mImgList[i].setImageUrl(mData.get(newIndex[i]), imageLoader);
+			mImgList[i].setImageResource(previewCacheItems[newIndex[i]]);
 			mImgListIdx[i] = newIndex[i];
 		}
 
@@ -283,10 +283,11 @@ public class MainActivity extends Activity {
 		}
 		SIZE = mData.size();
 		Log.d("LINH", "SIZE = " + SIZE);
-		
+
 		previewCacheItems = new int[25];
 		for (int i = 0; i < 25; i++) {
-			previewCacheItems[i] = getResources().getIdentifier("f" + i, "drawable", getPackageName());
+			previewCacheItems[i] = getResources().getIdentifier("f" + i,
+					"drawable", getPackageName());
 		}
 		Log.d("LINH", "id = " + R.drawable.f0 + " ? " + previewCacheItems[0]);
 	}

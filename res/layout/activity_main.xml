@@ -30,7 +30,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/layout_border" >
 
-                    <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                    <ImageView
                         android:id="@+id/layout_1_img1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -45,7 +45,7 @@
                     android:layout_weight="2"
                     android:background="@drawable/layout_border" >
 
-                    <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                    <ImageView
                         android:id="@+id/layout_1_img2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -82,7 +82,7 @@
                             android:layout_weight="1"
                             android:background="@drawable/layout_border" >
 
-                            <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                            <ImageView
                                 android:id="@+id/layout_2_img1"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -98,7 +98,7 @@
                             android:layout_weight="1"
                             android:background="@drawable/layout_border" >
 
-                            <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                            <ImageView
                                 android:id="@+id/layout_2_img2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -123,7 +123,7 @@
                             android:layout_weight="1"
                             android:background="@drawable/layout_border" >
 
-                            <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                            <ImageView
                                 android:id="@+id/layout_2_img3"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -138,7 +138,7 @@
                             android:layout_weight="1"
                             android:background="@drawable/layout_border" >
 
-                            <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                            <ImageView
                                 android:id="@+id/layout_2_img4"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -156,7 +156,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/layout_border" >
 
-                    <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                    <ImageView
                         android:id="@+id/layout_2_img5"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -194,7 +194,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/layout_border" >
 
-                        <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                        <ImageView
                             android:id="@+id/layout_3_img1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -210,7 +210,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/layout_border" >
 
-                        <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                        <ImageView
                             android:id="@+id/layout_3_img2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -234,7 +234,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/layout_border" >
 
-                        <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                        <ImageView
                             android:id="@+id/layout_3_img3"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -251,7 +251,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/layout_border" >
 
-                        <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                        <ImageView
                             android:id="@+id/layout_3_img4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -285,7 +285,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/layout_border" >
 
-                        <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                        <ImageView
                             android:id="@+id/layout_4_img1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -302,7 +302,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/layout_border" >
 
-                        <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                        <ImageView
                             android:id="@+id/layout_4_img2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -319,7 +319,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/layout_border" >
 
-                    <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                    <ImageView
                         android:id="@+id/layout_4_img3"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"

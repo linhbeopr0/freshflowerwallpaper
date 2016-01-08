@@ -142,7 +142,6 @@ public class ListImagesAdapter extends BaseAdapter {
 			imageLoader = AppController.getInstance().getImageLoader();
 		}
 
-		if (position >= 25) {
 		holder.iv.setImageUrl(data.get(position), imageLoader);
 		// Set the data outside once the handler and view are instantiated
 		holder.iv
@@ -158,7 +157,8 @@ public class ListImagesAdapter extends BaseAdapter {
 							msg.what = 100;
 							mHandler.sendMessage(msg);
 							scrolling_count++;
-							// TODO: still not working with success, always return 0 pos
+							// TODO: still not working with success, always
+							// return 0 pos
 						}
 					}
 
@@ -170,10 +170,7 @@ public class ListImagesAdapter extends BaseAdapter {
 
 					}
 				});
-		} else {
-			holder.iv.setImageResource(MainActivity.previewCacheItems[position]);
-		}
-		
+
 		// handler.iv.setImageResource(R.drawable.ct1);
 		FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(columnWidth,
 				rowHeight);// convertView.getLayoutParams();
