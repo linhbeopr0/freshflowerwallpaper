@@ -24,6 +24,7 @@ public class ViewPagerFragment extends Fragment {
 	private Context mContext;
 	private Bundle mData;
 	private String mLink;
+	private int mPos;
 	private MyNetworkImageWithResponse mFullScreenImg;
 	private ImageLoader mImageLoader = AppController.getInstance()
 			.getImageLoader();
@@ -41,6 +42,7 @@ public class ViewPagerFragment extends Fragment {
 		// TODO Auto-generated method stub
 		mData = getArguments();
 		mLink = mData.getString("link");
+		mPos = mData.getInt("pos");
 		super.onCreate(savedInstanceState);
 	}
 
@@ -50,7 +52,12 @@ public class ViewPagerFragment extends Fragment {
 		View v = inflater.inflate(R.layout.activity_viewpager_fragment,
 				container, false);
 		mFullScreenImg = (MyNetworkImageWithResponse) v.findViewById(R.id.categoryImgView);
-		mFullScreenImg.setImageUrl(mLink, mImageLoader);
+		if (mPos >= 25) {
+			mFullScreenImg.setImageUrl(mLink, mImageLoader);
+		} else {
+			mFullScreenImg.setImageResource(MainActivity.previewCacheItems[mPos]);
+		}
+		
 		mFullScreenImg.setOnClickListener(new OnClickListener() {
 
 			@Override

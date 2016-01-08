@@ -32,6 +32,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 		mFragment = new ViewPagerFragment(mContext);
 		Bundle info = new Bundle();
 		info.putString("link", mData.get(pos));
+		info.putInt("pos", pos);
 		mFragment.setArguments(info);
 		return mFragment;
 	}

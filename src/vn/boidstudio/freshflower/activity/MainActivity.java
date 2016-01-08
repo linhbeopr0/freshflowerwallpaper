@@ -67,6 +67,7 @@ public class MainActivity extends Activity {
 	public static final String mName = "flowers";
 
 	public static List<String> mData;
+	public static int previewCacheItems[];
 	private static Typeface Rabanera_shadow_font;
 
 	@Override
@@ -223,7 +224,7 @@ public class MainActivity extends Activity {
 		mImgList[12] = (MyNetworkImage) findViewById(R.id.layout_4_img2);
 		mImgList[13] = (MyNetworkImage) findViewById(R.id.layout_4_img3);
 
-		final int[] newIndex = randomAllocate(SIZE);
+		final int[] newIndex = randomAllocate(previewCacheItems.length);
 
 		for (int i = 0; i < ITEM_SIZE; i++) {
 			/*
@@ -231,7 +232,9 @@ public class MainActivity extends Activity {
 			 * .getImageListener(mImgList[i], R.drawable.icon_no_img,
 			 * R.drawable.icon_no_img), 400, 300);
 			 */
-			mImgList[i].setImageUrl(mData.get(newIndex[i]), imageLoader);
+			//mImgList[i].setImageUrl(mData.get(newIndex[i]), imageLoader);
+			Log.d("LINH", "id = " + previewCacheItems[newIndex[i]]);
+			mImgList[i].setImageResource(R.drawable.f0);
 			mImgListIdx[i] = newIndex[i];
 		}
 
@@ -280,6 +283,12 @@ public class MainActivity extends Activity {
 		}
 		SIZE = mData.size();
 		Log.d("LINH", "SIZE = " + SIZE);
+		
+		previewCacheItems = new int[25];
+		for (int i = 0; i < 25; i++) {
+			previewCacheItems[i] = getResources().getIdentifier("f" + i, "drawable", getPackageName());
+		}
+		Log.d("LINH", "id = " + R.drawable.f0 + " ? " + previewCacheItems[0]);
 	}
 
 	private BroadcastReceiver mConnReceiver = new BroadcastReceiver() {

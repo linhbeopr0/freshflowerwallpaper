@@ -5,6 +5,7 @@ import java.util.List;
 
 import vn.boidstudio.freshflower.R;
 import vn.boidstudio.freshflower.activity.ListImagesActivity;
+import vn.boidstudio.freshflower.activity.MainActivity;
 import vn.boidstudio.freshflower.activity.ViewPagerActivity;
 import vn.boidstudio.freshflower.model.CategoryData;
 import vn.boidstudio.freshflower.volley.utils.AppController;
@@ -138,6 +139,7 @@ public class PreviewListAdapter extends BaseAdapter {
 		// Set the data outside once the handler and view are instantiated
 		// handler.iv.setImageUrl(data.get(position).getImgLinks(),
 		// imageLoader);
+		if (position > 25) {
 		holder.iv
 				.setResponseObserver(new MyNetworkImageWithResponse.ResponseObserver() {
 
@@ -151,6 +153,7 @@ public class PreviewListAdapter extends BaseAdapter {
 							msg.what = 100;
 							mHandler.sendMessage(msg);
 							scrolling_count++;
+							// TODO: still not working with success, always return 0 pos
 						}
 					}
 
@@ -160,6 +163,9 @@ public class PreviewListAdapter extends BaseAdapter {
 
 					}
 				});
+		} else {
+			holder.iv.setImageResource(MainActivity.previewCacheItems[position]);
+		}
 
 		holder.iv.setImageUrl(data.get(position), imageLoader);
 		FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(columnWidth,
