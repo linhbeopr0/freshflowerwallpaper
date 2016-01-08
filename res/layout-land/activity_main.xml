@@ -1,0 +1,369 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="vn.boidstudio.freshflower.activity.MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/layout_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_border" >
+
+                    <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                        android:id="@+id/layout_1_img1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="0.5dp"
+                        android:paddingRight="0.5dp"
+                        android:scaleType="fitXY" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/layout_border" >
+
+                    <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                        android:id="@+id/layout_1_img2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="0.5dp"
+                        android:paddingRight="0.5dp"
+                        android:paddingTop="0.5dp"
+                        android:scaleType="fitXY" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/layout_border"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/layout_border" >
+
+                            <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                                android:id="@+id/layout_2_img1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="0.5dp"
+                                android:paddingLeft="0.5dp"
+                                android:paddingRight="0.5dp"
+                                android:scaleType="fitXY" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/layout_border" >
+
+                            <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                                android:id="@+id/layout_2_img2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="0.5dp"
+                                android:paddingLeft="0.5dp"
+                                android:paddingRight="0.5dp"
+                                android:paddingTop="0.5dp"
+                                android:scaleType="fitXY" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/layout_border"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/layout_border" >
+
+                            <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                                android:id="@+id/layout_2_img3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="0.5dp"
+                                android:paddingLeft="0.5dp"
+                                android:scaleType="fitXY" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/layout_border" >
+
+                            <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                                android:id="@+id/layout_2_img4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="0.5dp"
+                                android:paddingLeft="0.5dp"
+                                android:paddingTop="0.5dp"
+                                android:scaleType="fitXY" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_border" >
+
+                    <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                        android:id="@+id/layout_2_img5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="0.5dp"
+                        android:paddingLeft="0.5dp"
+                        android:paddingTop="0.5dp"
+                        android:scaleType="fitXY" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/layout_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/layout_border"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/layout_border" >
+
+                        <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                            android:id="@+id/layout_3_img1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="0.5dp"
+                            android:paddingRight="0.5dp"
+                            android:paddingTop="0.5dp"
+                            android:scaleType="fitXY" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/layout_border" >
+
+                        <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                            android:id="@+id/layout_3_img2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="0.5dp"
+                            android:paddingLeft="1dp"
+                            android:paddingRight="0.5dp"
+                            android:paddingTop="0.5dp"
+                            android:scaleType="fitXY" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_border" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/layout_border" >
+
+                        <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                            android:id="@+id/layout_3_img3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingBottom="1dp"
+                            android:paddingRight="0.5dp"
+                            android:paddingTop="0.5dp"
+                            android:scaleType="fitXY" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/layout_border" >
+
+                        <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                            android:id="@+id/layout_3_img4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="0.5dp"
+                            android:paddingRight="0.5dp"
+                            android:paddingTop="0.5dp"
+                            android:scaleType="fitXY" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/layout_border"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/layout_border" >
+
+                        <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                            android:id="@+id/layout_4_img1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="0.5dp"
+                            android:paddingLeft="0.5dp"
+                            android:paddingRight="0.5dp"
+                            android:paddingTop="0.5dp"
+                            android:scaleType="fitXY" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/layout_border" >
+
+                        <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                            android:id="@+id/layout_4_img2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="0.5dp"
+                            android:paddingLeft="0.5dp"
+                            android:paddingTop="0.5dp"
+                            android:scaleType="fitXY" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_border" >
+
+                    <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+                        android:id="@+id/layout_4_img3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingBottom="1dp"
+                        android:paddingLeft="0.5dp"
+                        android:paddingTop="0.5dp"
+                        android:scaleType="fitXY" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_weight="0.08"
+        android:background="@drawable/btn_rounded_corner_ct" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_drawer_new" />
+
+        <TextView
+            android:id="@+id/txtBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="HD Wallpaper"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <com.startapp.android.publish.banner.Banner
+        android:id="@+id/startAppBanner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center" />
+
+</LinearLayout>

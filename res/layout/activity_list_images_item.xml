@@ -12,7 +12,7 @@
         android:layout_gravity="center" >
     </ProgressBar>
 
-    <vn.cbtech.hdwallpaper.volley.utils.MyNetworkImage
+    <vn.boidstudio.freshflower.volley.utils.MyNetworkImageWithResponse
         android:id="@+id/lstImgView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

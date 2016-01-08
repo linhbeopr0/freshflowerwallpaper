@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="vn.cbtech.hdwallpaper"
+    package="vn.boidstudio.freshflower"
     android:versionCode="1"
     android:versionName="1" >
 
@@ -15,27 +15,36 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="vn.cbtech.hdwallpaper.volley.utils.AppController"
+        android:name="vn.boidstudio.freshflower.volley.utils.AppController"
         android:allowBackup="true"
         android:icon="@drawable/icon_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="vn.cbtech.hdwallpaper.activity.MainActivity"
-            android:label="@string/app_name" >
+            android:name="vn.boidstudio.freshflower.activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="vn.cbtech.hdwallpaper.activity.CategoryActivity" >
+        <activity
+            android:name="vn.boidstudio.freshflower.activity.ListImagesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape" >
         </activity>
-        <activity android:name="vn.cbtech.hdwallpaper.activity.ListImagesActivity" >
+        <activity
+            android:name="vn.boidstudio.freshflower.activity.FullScreenActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape" >
         </activity>
-        <activity android:name="vn.cbtech.hdwallpaper.activity.FullScreenActivity" >
-        </activity>
-        <activity android:name="vn.cbtech.hdwallpaper.activity.ViewPagerActivity" >
+        <activity
+            android:name="vn.boidstudio.freshflower.activity.ViewPagerActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape" >
         </activity>
 
         <!-- StartApp activities integration -->
@@ -53,7 +62,7 @@
         <meta-data
             android:name="com.startapp.android.APP_ID"
             android:value="201154763" />
-- 
+- 
         <!-- End of StartApp activities integration -->
     </application>
 

@@ -38,7 +38,7 @@ package com.jess.ui;
 import java.util.ArrayList;
 import java.util.List;
 
-import vn.cbtech.hdwallpaper.R;
+import vn.boidstudio.freshflower.R;
 
 import android.content.Context;
 import android.content.res.Configuration;

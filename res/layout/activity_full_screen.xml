@@ -15,23 +15,12 @@
             android:layout_gravity="center" >
         </ProgressBar>
 
-        <HorizontalScrollView
+        <vn.boidstudio.freshflower.volley.utils.MyNetworkImage
+            android:id="@+id/imgFullscreen"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="none" >
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent" >
-
-                <vn.cbtech.hdwallpaper.volley.utils.MyNetworkImage
-                    android:id="@+id/imgFullscreen"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitXY" />
-            </LinearLayout>
-        </HorizontalScrollView>
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
     </FrameLayout>
 
     <!-- Set as wallpaper button -->
@@ -93,7 +82,7 @@
         android:id="@+id/startAppBanner1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
